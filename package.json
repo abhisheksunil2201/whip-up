@@ -1,0 +1,54 @@
+{
+  "name": "@whip-up/root",
+  "version": "0.0.0",
+  "description": "Quickest way to start a new SaaS",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhisheksunil2201/whip-up.git"
+  },
+  "keywords": [
+    "whip-up",
+    "saas",
+    "next.js",
+    "tailwind",
+    "tRPC",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "packageManager": "pnpm@8.5.1",
+  "scripts": {
+    "typecheck": "turbo typecheck",
+    "build:cli": "turbo --filter=cli build",
+    "build": "turbo build",
+    "start:cli": "turbo --filter=cli start",
+    "dev:cli": "turbo --filter=cli dev",
+    "clean": "turbo clean && rm -rf node_modules",
+    "lint": "turbo lint && manypkg check",
+    "lint:fix": "turbo lint:fix && manypkg fix",
+    "format": "turbo format && prettier --write '*.{cjs,json}' --ignore-unknown --no-error-on-unmatched-pattern",
+    "format:check": "turbo format:check && prettier --check '*.{cjs,json}' --ignore-unknown --no-error-on-unmatched-pattern",
+    "check": "turbo lint typecheck format:check && manypkg check"
+  },
+  "dependencies": {
+    "@total-typescript/ts-reset": "^0.3.7",
+    "@types/eslint": "^8.56.2",
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^0.0.9",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-isaacscript": "^2.6.7",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.5",
+    "turbo": "^1.9.6",
+    "typescript": "^5.4.2"
+  }
+}
